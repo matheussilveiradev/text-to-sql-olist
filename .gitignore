@@ -1,0 +1,13 @@
+# segredos
+.env
+
+# dados (baixados e gerados localmente)
+data/
+*.db
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/

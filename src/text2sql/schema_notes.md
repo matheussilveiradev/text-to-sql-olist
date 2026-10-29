@@ -1,0 +1,10 @@
+- Dados de um e-commerce brasileiro (Olist), pedidos de 2016 a 2018.
+- Datas são TEXT no formato 'YYYY-MM-DD HH:MM:SS'. Use strftime('%Y-%m', coluna) para agrupar por mês e julianday() para diferenças em dias.
+- Um pedido (orders) tem vários itens (order_items). Cada linha de order_items é uma unidade vendida.
+- Faturamento ou receita = SUM(order_items.price). O frete fica separado em order_items.freight_value e só entra quando a pergunta pedir.
+- Valor pago pelo cliente = SUM(payments.payment_value). Um pedido pode ter vários pagamentos.
+- Considere apenas pedidos com order_status = 'delivered' quando a pergunta falar em vendas, faturamento ou entregas, a não ser que ela peça outro status.
+- Os estados (customer_state, seller_state) são siglas como 'SP', 'RJ', 'MG'.
+- Os nomes de categoria em products.product_category_name estão em português, como 'beleza_saude' e 'cama_mesa_banho'. A tradução para inglês está em category_translation.
+- O mesmo cliente pode ter vários customer_id. Para contar clientes únicos, use COUNT(DISTINCT customers.customer_unique_id).
+- reviews.review_score vai de 1 a 5.
